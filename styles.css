@@ -1,0 +1,73 @@
+/* courtesy of http://stackoverflow.com/questions/2528047/making-a-form-input-field-large */
+.submissionfield {
+		width: 80px; height: 50px; border: 1px solid #999999; padding: 5px;
+}
+.questiontext {
+		font-family: cursive;
+		color: yellow;
+}
+/* courtesy of http://uigradients.com/# */
+body {
+background: #4ECDC4; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #4ECDC4 , #556270); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #4ECDC4 , #556270); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+/* Courtesy of http://tutorialzine.com/2013/10/12-awesome-css3-features-you-can-finally-use/ */
+.container{
+
+	/* Set a counter named cnt to 0 */
+	counter-reset: cnt;
+
+	position:relative;
+	text-align:center;
+	padding:20px 0;
+	width:420px;
+	height: 160px;
+	margin: 0 auto;
+}
+
+/* You can style pseudo elements and give them content,
+   as if they were real elements on the page */
+
+.container::before{
+	display: block;
+	content:'Hover over these items:';
+	font-size:18px;
+	font-weight:bold;
+	text-align:center;
+	padding:18px;
+	font-family: cursive;
+	color: yellow;
+}
+
+.container span{
+	display:inline-block;
+	padding:6px 10px;
+	background-color:#78CCD2;
+	color:#186C72;
+	border-radius:4px;
+	margin:3px;
+	cursor:default;
+	font-family: cursive;
+}
+
+/* Pseudo elements can even access attributes of their parent element */
+
+.container span::before{
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:100%;
+	content:attr(data-title);
+	color:white;
+
+	opacity:0;
+
+	/* Animate the transitions */
+	-webkit-transition:opacity 0.4s;
+	transition:opacity 0.4s;
+}
+
+.container span:hover::before{
+	opacity:1;
+}
