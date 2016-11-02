@@ -4,14 +4,19 @@ var amountCorrect = 0;
 if (isNaN(answer1)) {
   window.alert("The input must be a number!!");
 }
+else if (answer1 == ""){
+  window.alert("The input must be a number!!");
+}
 else if (answer1 == 7363431296){
   amountCorrect = amountCorrect + 1;
   console.log(amountCorrect);
   //courtesy of http://www.w3schools.com/jsref/prop_text_disabled.asp
   document.getElementById("answerText").disabled = true;
+  window.alert("The answer you entered was correct!\nGo to the bottom and press Click Here for the next test.");
 }
 else{
 document.getElementById("answerText").disabled = true;
+window.alert("The answer you entered was incorrect.\nGo to the bottom and press Click Here for the next test.");
 }
 }
 
