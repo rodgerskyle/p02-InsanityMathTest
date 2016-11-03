@@ -12,7 +12,7 @@ else if (answer1 == ""){
 }
 else if (answer1 == 7363431296){
   amountCorrect = amountCorrect + 1;
-  setCookie("correct", "amountCorrect");
+  setCookie("correct", amountCorrect);
   console.log(amountCorrect);
   //courtesy of http://www.w3schools.com/jsref/prop_text_disabled.asp
   document.getElementById("answerText").disabled = true;
