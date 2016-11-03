@@ -12,7 +12,7 @@ else if (answer1 == ""){
 }
 else if (answer1 == 7363431296){
   amountCorrect = amountCorrect + 1;
-  setCookie("correct", amountCorrect);
+  setCookie("correct", "amountCorrect");
   console.log(amountCorrect);
   //courtesy of http://www.w3schools.com/jsref/prop_text_disabled.asp
   document.getElementById("answerText").disabled = true;
@@ -22,6 +22,32 @@ else{
 document.getElementById("answerText").disabled = true;
 window.alert("The answer you entered was incorrect.\nGo to the bottom and press Click Here for the next test.");
 }
+}
+function run2();{
+  var answer2 = document.getElementById("answerText").value;
+  var amountCorrect = getCookie("correct");
+  console.log (amountCorrect);
+  if (isNaN(answer2)) {
+    window.alert("The input must be a number!!");
+  }
+  else if (answer2.includes(" ")){
+    window.alert("The input must be a number and/or not contain a space!!");
+  }
+  else if (answer2 == ""){
+    window.alert("The input must be a number!!");
+  }
+  else if (answer2 == 7456){
+    amountCorrect = amountCorrect + 1;
+    setCookie("correct", "amountCorrect");
+    console.log(amountCorrect);
+    //courtesy of http://www.w3schools.com/jsref/prop_text_disabled.asp
+    document.getElementById("answerText").disabled = true;
+    window.alert("The answer you entered was correct!\nGo to the bottom and press Click Here for the next test.");
+  }
+  else{
+  document.getElementById("answerText").disabled = true;
+  window.alert("The answer you entered was incorrect.\nGo to the bottom and press Click Here for the next test.");
+  }
 }
 
 function setCookie(cname, cvalue, exdays) {
