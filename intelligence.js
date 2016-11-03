@@ -25,7 +25,9 @@ window.alert("The answer you entered was incorrect.\nGo to the bottom and press 
 }
 function run2(){
   var answer2 = document.getElementById("answerText").value;
-  var amountCorrect = getCookie("correct");
+  var amountCorrect = Number(amountCorrect);
+  amountCorrect = getCookie("correct");
+  amountCorrect = Number(amountCorrect);
   console.log (amountCorrect);
   if (isNaN(answer2)) {
     window.alert("The input must be a number!!");
