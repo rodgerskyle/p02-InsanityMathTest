@@ -4,6 +4,9 @@ var amountCorrect = 0;
 if (isNaN(answer1)) {
   window.alert("The input must be a number!!");
 }
+else if (answer1.includes(" ")){
+  window.alert("The input must be a number and/or not contain a space!!");
+}
 else if (answer1 == ""){
   window.alert("The input must be a number!!");
 }
