@@ -23,7 +23,7 @@ document.getElementById("answerText").disabled = true;
 window.alert("The answer you entered was incorrect.\nGo to the bottom and press Click Here for the next test.");
 }
 }
-function run2();{
+function run2(){
   var answer2 = document.getElementById("answerText").value;
   var amountCorrect = getCookie("correct");
   console.log (amountCorrect);
