@@ -84,10 +84,10 @@ function run3(){
   }
 }
 function results(){
-  document.getElementById("result1").innerHTML = getCookie("correct");
-  document.getElementById("result2").innerHTML = getCookie("correct2");
-  document.getElementById("result3").innerHTML = getCookie("correct3");
-  document.getElementById("total").innerHTML = getCookie("correct") + getCookie("correct2") + getCookie("correct3") / 3 * 100;
+  document.getElementById("result1").innerHTML = getCookie("correct") + "/1";
+  document.getElementById("result2").innerHTML = getCookie("correct2") + "/1";
+  document.getElementById("result3").innerHTML = getCookie("correct3") + "/1";
+  document.getElementById("total").innerHTML = "%" + getCookie("correct") + getCookie("correct2") + getCookie("correct3") / 3 * 100;
 }
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
