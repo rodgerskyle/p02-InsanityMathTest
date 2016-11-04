@@ -73,11 +73,11 @@ function run3(){
     console.log(amountCorrect);
     //courtesy of http://www.w3schools.com/jsref/prop_text_disabled.asp
     document.getElementById("answerText").disabled = true;
-    window.alert("The answer you entered was correct!\nGo to the bottom and press Click Here for the next test.");
+    window.alert("The answer you entered was correct!\nGo to the bottom and press Get Results for the results.");
   }
   else{
   document.getElementById("answerText").disabled = true;
-  window.alert("The answer you entered was incorrect.\nGo to the bottom and press Click Here for the next test.");
+  window.alert("The answer you entered was incorrect.\nGo to the bottom and press Get Results for the results.");
   }
 }
 
