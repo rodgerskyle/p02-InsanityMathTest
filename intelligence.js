@@ -53,6 +53,34 @@ function run2(){
   }
 }
 
+function run3(){
+  var answer3 = document.getElementById("answerText").value;
+  var amountCorrect = 0;
+  amountCorrect = Number(amountCorrect);
+  console.log (amountCorrect);
+  if (isNaN(answer3)) {
+    window.alert("The input must be a number!!");
+  }
+  else if (answer3.includes(" ")){
+    window.alert("The input must be a number and/or not contain a space!!");
+  }
+  else if (answer3 == ""){
+    window.alert("The input must be a number!!");
+  }
+  else if (answer3 == 81381381){
+    amountCorrect = amountCorrect + 1;
+    setCookie("correct3", amountCorrect);
+    console.log(amountCorrect);
+    //courtesy of http://www.w3schools.com/jsref/prop_text_disabled.asp
+    document.getElementById("answerText").disabled = true;
+    window.alert("The answer you entered was correct!\nGo to the bottom and press Click Here for the next test.");
+  }
+  else{
+  document.getElementById("answerText").disabled = true;
+  window.alert("The answer you entered was incorrect.\nGo to the bottom and press Click Here for the next test.");
+  }
+}
+
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
