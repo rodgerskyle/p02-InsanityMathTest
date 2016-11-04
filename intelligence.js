@@ -41,7 +41,7 @@ function run2(){
   }
   else if (answer2 == 7456){
     amountCorrect = amountCorrect + 1;
-    setCookie("correct2", "amountCorrect");
+    setCookie("correct2", amountCorrect);
     console.log(amountCorrect);
     //courtesy of http://www.w3schools.com/jsref/prop_text_disabled.asp
     document.getElementById("answerText").disabled = true;
