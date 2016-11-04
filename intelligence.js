@@ -23,6 +23,7 @@ else if (answer1 == 7363431296){
 else{
 document.getElementById("answerText").disabled = true;
 window.alert("The answer you entered was incorrect.\nGo to the bottom and press Click Here for the next test.");
+setCookie("correct", amountCorrect);
 }
 }
 function run2(){
@@ -50,6 +51,7 @@ function run2(){
   else{
   document.getElementById("answerText").disabled = true;
   window.alert("The answer you entered was incorrect.\nGo to the bottom and press Click Here for the next test.");
+  setCookie("correct2", amountCorrect);
   }
 }
 
@@ -78,6 +80,7 @@ function run3(){
   else{
   document.getElementById("answerText").disabled = true;
   window.alert("The answer you entered was incorrect.\nGo to the bottom and press Get Results for the results.");
+  setCookie("correct3", amountCorrect);
   }
 }
 function results(){
