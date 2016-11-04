@@ -80,7 +80,12 @@ function run3(){
   window.alert("The answer you entered was incorrect.\nGo to the bottom and press Get Results for the results.");
   }
 }
-
+function results(){
+  document.getElementById("result1").innerHTML = getCookie(correct);
+  document.getElementById("result2").innerHTML = getCookie(correct2);
+  document.getElementById("result3").innerHTML = getCookie(correct3);
+  document.getElementById("total").innerHTML = getCookie(correct) + getCookie(correct2) + getCookie(correct3) / 3 * 100;
+}
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));

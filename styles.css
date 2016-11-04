@@ -136,6 +136,16 @@ a.before:hover:before,a.after:hover:after{
 		font-family: cursive;
 		color: yellow;
 }
+.resulttext {
+  position:relative;
+	text-align:center;
+	padding:20px 0;
+	width:420px;
+	height: 160px;
+  font-family: cursive;
+  color: white;
+  margin: 0 auto;
+}
 /* courtesy of http://uigradients.com/# */
 body {
 background: #4ECDC4; /* fallback for old browsers */
