@@ -1,6 +1,8 @@
+//Made by Kyle Rodgers
 function run(){
 var answer1 = document.getElementById("answerText").value;
 var amountCorrect = 0;
+amountCorrect = Number(amountCorrect);
 if (isNaN(answer1)) {
   window.alert("The input must be a number!!");
 }
@@ -25,8 +27,7 @@ window.alert("The answer you entered was incorrect.\nGo to the bottom and press 
 }
 function run2(){
   var answer2 = document.getElementById("answerText").value;
-  var amountCorrect = Number(amountCorrect);
-  amountCorrect = getCookie("correct");
+  var amountCorrect = 0;
   amountCorrect = Number(amountCorrect);
   console.log (amountCorrect);
   if (isNaN(answer2)) {
@@ -40,7 +41,7 @@ function run2(){
   }
   else if (answer2 == 7456){
     amountCorrect = amountCorrect + 1;
-    setCookie("correct", "amountCorrect");
+    setCookie("correct2", "amountCorrect");
     console.log(amountCorrect);
     //courtesy of http://www.w3schools.com/jsref/prop_text_disabled.asp
     document.getElementById("answerText").disabled = true;
