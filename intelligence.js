@@ -90,7 +90,7 @@ function results(){
   var totalNumber = Number(getCookie("correct")) + Number(getCookie("correct2")) + Number(getCookie("correct3"));
   totalNumber = totalNumber / 3;
   totalNumber = totalNumber * 100;
-  totalNumber = totalNumber.toFixed(5);
+  totalNumber = totalNumber.toFixed(2);
   setCookie("total", totalNumber);
   document.getElementById("total").innerHTML = getCookie("total") + "%" + " Correct";
 }
