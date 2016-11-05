@@ -84,9 +84,9 @@ function run3(){
   }
 }
 function results(){
-  document.getElementById("result1").innerHTML = getCookie("correct") + "/1";
-  document.getElementById("result2").innerHTML = getCookie("correct2") + "/1";
-  document.getElementById("result3").innerHTML = getCookie("correct3") + "/1";
+  document.getElementById("result1").innerHTML = Number(getCookie("correct")) + "/1";
+  document.getElementById("result2").innerHTML = Number(getCookie("correct2")) + "/1";
+  document.getElementById("result3").innerHTML = Number(getCookie("correct3")) + "/1";
   document.getElementById("total").innerHTML = Number(getCookie("correct")) + Number(getCookie("correct2")) + Number(getCookie("correct3")) /3 * 100 + "%" + " Correct";
 }
 function setCookie(cname, cvalue, exdays) {
