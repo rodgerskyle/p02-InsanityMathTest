@@ -87,7 +87,11 @@ function results(){
   document.getElementById("result1").innerHTML = Number(getCookie("correct")) + "/1";
   document.getElementById("result2").innerHTML = Number(getCookie("correct2")) + "/1";
   document.getElementById("result3").innerHTML = Number(getCookie("correct3")) + "/1";
-  document.getElementById("total").innerHTML = Number(getCookie("correct")) + Number(getCookie("correct2")) + Number(getCookie("correct3")) + "/3" + " Correct";
+  var totalNumber = Number(getCookie("correct")) + Number(getCookie("correct2")) + Number(getCookie("correct3"));
+  totalNumber = totalNumber / 3;
+  totalNumber = totalNumber * 100;
+  setCookie("total", totalNumber);
+  document.getElementById("total").innerHTML = getCookie("total") + "%" + " Correct";
 }
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
